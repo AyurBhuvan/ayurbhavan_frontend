@@ -18,10 +18,12 @@
     "@nextui-org/input": "2.2.5",
     "@nextui-org/modal": "2.0.41",
     "@nextui-org/navbar": "2.0.37",
+    "@nextui-org/pagination": "^2.0.36",
     "@nextui-org/skeleton": "2.0.32",
     "@nextui-org/spinner": "2.0.34",
     "@nextui-org/system": "2.2.6",
     "@nextui-org/theme": "2.2.11",
+    "@nextui-org/tooltip": "^2.0.41",
     "@tanstack/react-query": "5.56.2",
     "framer-motion": "11.6.0",
     "ky": "1.7.2",
@@ -33,6 +35,7 @@
     "zod": "3.23.8"
   },
   "devDependencies": {
+    "@directus/types": "^12.0.1",
     "@types/node": "20",
     "@types/react": "18",
     "@types/react-dom": "18",
