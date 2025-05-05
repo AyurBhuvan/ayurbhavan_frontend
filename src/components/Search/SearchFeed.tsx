@@ -3,7 +3,6 @@ import RenderPlantsGrid from "../Plant/RenderPlantsGrid";
 import DisplayPlantsSkeleton from "../Skeletons/DisplayPlantsSkeleton";
 import {
   usePaginatedSearchPlants,
-  useSearchPlants,
 } from "@/hooks/useSearchPlant";
 import FilterModel from "./FilterModel";
 import { useEffect, useState } from "react";
@@ -20,7 +19,7 @@ const SearchFeed = ({ search_term }: { search_term: string }) => {
   //   isFetching,
   //   isError,
   // } = useSearchPlants(search_term);
-  const [filterOptions,setFilterOptions]=useAtom(FilterOptionsAtom);
+  const [filterOptions, setFilterOptions] = useAtom(FilterOptionsAtom);
 
   const resultsPerPage = 6;
   const {
@@ -30,19 +29,19 @@ const SearchFeed = ({ search_term }: { search_term: string }) => {
     isError,
   } = usePaginatedSearchPlants(search_term, currentPage, resultsPerPage);
 
-  useEffect(()=>{
+  useEffect(() => {
     console.log(currentPage);
-    
-  },[currentPage])
 
-  useEffect(()=>{
+  }, [currentPage])
+
+  useEffect(() => {
     // console.log(searchResult);
     setFilterOptions({
       query: search_term
     })
     console.log(filterOptions);
-    
-  },[search_term])
+
+  }, [search_term])
 
   console.log("component called");
   console.log(searchResult);

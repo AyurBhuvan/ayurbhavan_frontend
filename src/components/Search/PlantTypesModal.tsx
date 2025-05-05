@@ -4,22 +4,22 @@ import { Checkbox, CheckboxGroup } from "@nextui-org/checkbox";
 import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, ModalProps, useDisclosure } from "@nextui-org/modal";
 import { useEffect, useState } from "react";
 
-const PlantTypesModal = ({plant_types}:{
-    plant_types:PlantType[]
+const PlantTypesModal = ({ plant_types }: {
+  plant_types: PlantType[]
 }) => {
-    const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const handleOpen = () => {
     onOpen();
   };
-  const [scrollBehavior, setScrollBehavior] =
+  const [scrollBehavior] =
     useState<ModalProps["scrollBehavior"]>("inside");
-  const [backdrop, setBackdrop] = useState<ModalProps["backdrop"]>("blur");
+  const [backdrop] = useState<ModalProps["backdrop"]>("blur");
   const [selected, setSelected] = useState<string[]>([]);
 
-  useEffect(()=>{
+  useEffect(() => {
     console.log(selected);
-    
-  },[selected])
+
+  }, [selected])
 
   return (
     <>
@@ -44,7 +44,7 @@ const PlantTypesModal = ({plant_types}:{
                   <CheckboxGroup
                     color="primary"
                     //   value={selected}
-                      onValueChange={setSelected}
+                    onValueChange={setSelected}
                   >
                     {plant_types.map((plant_type) => (
                       <Checkbox value={plant_type.plant_type}>
