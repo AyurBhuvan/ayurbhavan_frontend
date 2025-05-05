@@ -1,0 +1,44 @@
+{
+    "data": [
+        {
+            "id": "7d8d9ac3-d39b-4031-aafd-f26373e3d74c",
+            "botanical_name": "Macaranga peltata",
+            "description": "some description",
+            "plant_type": "Tree",
+            "image_urls": [
+                {
+                    "image_url": "https://tse3.mm.bing.net/th/id/OIP.1DSc2UwgebgdJ3xQMQZTnAHaFj?w=281&h=212&c=7&r=0&o=5&pid=1.7",
+                    "id": "35b9cf29-8e94-4b8f-b930-88052a5351af"
+                },
+                {
+                    "image_url": "https://tse3.mm.bing.net/th/id/OIP.0ya_Tt88Xd_b8P0ZLEpQfQHaFj?w=282&h=212&c=7&r=0&o=5&pid=1.7",
+                    "id": "71a2fd3f-bef0-4c01-ada4-33323c589459"
+                }
+            ],
+            "medicinal_uses": [
+                {
+                    "medicinal_use": "The plant is also used as a folk remedy for snakebites, scorpion stings, and other venomous bites.",
+                    "id": "3abd4f30-6019-4f05-b7e2-475c70e56afe"
+                },
+                {
+                    "medicinal_use": "The roots are used to treat toothache and earache.",
+                    "id": "46e023a3-5567-4668-8799-da1784bab736"
+                }
+            ],
+            "regions": [
+                {
+                    "regions_id": {
+                        "name": "Assam",
+                        "id": 597
+                    }
+                },
+                {
+                    "regions_id": {
+                        "name": "Bengal",
+                        "id": 606
+                    }
+                }
+            ]
+        }
+    ]
+}

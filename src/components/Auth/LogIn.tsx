@@ -16,17 +16,24 @@ import { Spinner } from "@nextui-org/spinner";
 const LogIn = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const { mutate: login, isPending, isError, isSuccess } = useLoginUser();
+  const { mutate: login, isPending } = useLoginUser();
+
 
   const { register, handleSubmit } = useForm<LoginType>();
 
   const toggleVisibility = () => setIsVisible(!isVisible);
 
-  function onLogInPress(values: LoginType) {
-    console.log(values);
+  async function onLogInPress(values: LoginType) {
+    // console.log(values);
+
 
     login(values);
+    
+    
+
+
   }
+
 
   return (
     <>

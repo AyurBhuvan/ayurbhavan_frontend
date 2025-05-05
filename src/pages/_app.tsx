@@ -4,6 +4,7 @@ import { NextUIProvider } from "@nextui-org/system";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Head from "next/head";
 import Layout from "@/components/Layout";
+import { Toaster } from "sonner";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,8 @@ export default function App({ Component, pageProps }: AppProps) {
         <Layout>
           <NextUIProvider>
             <main className="">
+            <Toaster position="top-center" richColors closeButton />
+
               <Component {...pageProps} />
             </main>
           </NextUIProvider>

@@ -17,3 +17,9 @@ export const login = async (credentials:LoginType) =>{
 export const signup = async (credentials:SignUpType) =>{
     return await post("users/register",credentials);
 }
+
+export const logout = async () =>{
+    return await post("auth/logout",{
+        mode:"session"
+    })
+}
