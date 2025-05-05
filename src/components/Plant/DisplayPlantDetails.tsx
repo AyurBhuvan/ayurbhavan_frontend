@@ -3,7 +3,6 @@ import { useFetchAPlant } from "@/hooks/useFetchPlant";
 const DisplayPlantDetails = ({ id }: { id: string }) => {
   const {
     data: plant,
-    isFetched,
     isLoading,
     isFetching,
     isError,
@@ -11,7 +10,7 @@ const DisplayPlantDetails = ({ id }: { id: string }) => {
 
   console.log(plant);
 
-  if(isLoading || isFetching) { 
+  if (isLoading || isFetching) {
     return (
       <div className="">Is Loading...........</div>
     );

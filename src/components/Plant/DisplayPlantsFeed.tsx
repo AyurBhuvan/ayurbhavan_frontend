@@ -1,5 +1,5 @@
 import { useFetchFeedPlants } from "@/hooks/useFetchPlant";
-import { Dispatch, useState } from "react";
+import { useState } from "react";
 import DisplayPlantsSkeleton from "../Skeletons/DisplayPlantsSkeleton";
 import PlantCard from "./Plant_Card";
 import PaginatePlants from "./PaginatePlants";
@@ -32,8 +32,8 @@ const DisplayPlantsFeed = () => {
 
   if (isFetched && isSuccess) {
     return (
-      
-      
+
+
       <div className="w-full mx-auto border border-green-500">
         {/* <div className="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
           

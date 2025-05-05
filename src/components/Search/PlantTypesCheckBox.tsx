@@ -1,18 +1,18 @@
 import { FilterOptionsAtom } from "@/atoms/FilterOptionsAtom";
-import { PlantType, Region } from "@/utils/plant_types/filter_types";
+import { PlantType } from "@/utils/plant_types/filter_types";
 import { Checkbox, CheckboxGroup } from "@nextui-org/checkbox";
 import { useAtom } from "jotai";
 import { useEffect, useState } from "react";
 
 const PlantTypesCheckBox = ({
-    plant_types,
-  }: {
-    plant_types: PlantType[];
-  }) => {
-    const [selected, setSelected] = useState<string[]>();
-  const [filterOptions, setFilterOptions] =useAtom(FilterOptionsAtom);
+  plant_types,
+}: {
+  plant_types: PlantType[];
+}) => {
+  const [selected, setSelected] = useState<string[]>();
+  const [filterOptions, setFilterOptions] = useAtom(FilterOptionsAtom);
   useEffect(() => {
-    
+
     setFilterOptions({
       ...filterOptions,
       plant_types: selected

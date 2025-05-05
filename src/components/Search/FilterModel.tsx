@@ -9,15 +9,14 @@ import {
   useDisclosure,
 } from "@nextui-org/modal";
 import { Button } from "@nextui-org/button";
-import { useState } from "react";
+// import { useState } from "react";
 import { Tab, Tabs } from "@nextui-org/tabs";
 import RenderTab from "./RenderTab";
-import MedicinalUsesCheckBox from "./MedicinalUsesCheckBox";
-import { Input } from "@nextui-org/input";
+// import { Input } from "@nextui-org/input";
 import { ListFilter } from "lucide-react";
 import { useAtom } from "jotai";
 import { FilterOptionsAtom } from "@/atoms/FilterOptionsAtom";
-import { SearchTermAtom } from "@/atoms/SearchTerm";
+// import { SearchTermAtom } from "@/atoms/SearchTerm";
 
 const FilterModel = ({ options }: { options: Filter }) => {
   // const  {medicinal_uses,plant_types,regions}=options;
@@ -25,12 +24,10 @@ const FilterModel = ({ options }: { options: Filter }) => {
 
   const filter_keys = Object.keys(options);
 
-  const [searchTerm, setSearchTerm] = useAtom(SearchTermAtom);
 
   filter_keys.reverse();
 
-  const [selectedFilterKey, setSelectedFilterKey] = useState<string>();
-  const [filterOptions,setFilterOptions]=useAtom(FilterOptionsAtom);
+  const [filterOptions] = useAtom(FilterOptionsAtom);
 
   const handleOpen = () => {
     onOpen();
@@ -40,16 +37,16 @@ const FilterModel = ({ options }: { options: Filter }) => {
     console.log("filter pressed");
 
     console.log(filterOptions);
-    
+
   }
 
   return (
     <div className="w-full flex justify-end gap-2">
       <div className="flex flex-wrap gap-3 ">
         <Button onPress={() => handleOpen()} radius="sm" color="success" className="text-white font-bold text-base" startContent={<ListFilter size={18} />}>
-          
+
           Filters
-          </Button>
+        </Button>
       </div>
       <Modal
         size="5xl"
@@ -62,17 +59,17 @@ const FilterModel = ({ options }: { options: Filter }) => {
             <>
               <ModalHeader className="flex flex-col gap-1">Filters</ModalHeader>
               <ModalBody>
-              <div className="">
+                <div className="">
 
-                    
-                    <Tabs>
-                      {filter_keys.map((key) => (
-                        <Tab key={key} title={key}>
-                          <RenderTab key_name={key} options={options} />
-                        </Tab>
-                      ))}
-                    </Tabs>
-                  </div>
+
+                  <Tabs>
+                    {filter_keys.map((key) => (
+                      <Tab key={key} title={key}>
+                        <RenderTab key_name={key} options={options} />
+                      </Tab>
+                    ))}
+                  </Tabs>
+                </div>
                 {/* <div className="flex">
                   
                 </div> */}
@@ -81,7 +78,7 @@ const FilterModel = ({ options }: { options: Filter }) => {
                 <Button color="danger" variant="light" onPress={onClose}>
                   Close
                 </Button>
-                <Button color="primary" onPress={()=>{
+                <Button color="primary" onPress={() => {
                   handleFilterPress()
                   onClose();
 

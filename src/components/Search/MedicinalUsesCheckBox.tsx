@@ -1,8 +1,6 @@
 import { FilterOptionsAtom } from "@/atoms/FilterOptionsAtom";
 import { MedicinalUse } from "@/utils/plant_types/filter_types";
-import { Button } from "@nextui-org/button";
 import { Checkbox, CheckboxGroup } from "@nextui-org/checkbox";
-import { Input } from "@nextui-org/input";
 import { useAtom } from "jotai";
 import { useEffect, useState } from "react";
 
@@ -12,9 +10,9 @@ const MedicinalUsesCheckBox = ({
   medicinal_uses: MedicinalUse[];
 }) => {
   const [selected, setSelected] = useState<string[]>();
-  const [filterOptions, setFilterOptions] =useAtom(FilterOptionsAtom);
+  const [filterOptions, setFilterOptions] = useAtom(FilterOptionsAtom);
   useEffect(() => {
-    
+
     setFilterOptions({
       ...filterOptions,
       medicinal_uses: selected

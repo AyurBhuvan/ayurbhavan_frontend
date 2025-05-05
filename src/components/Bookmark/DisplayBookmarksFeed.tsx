@@ -11,23 +11,22 @@ const DisplayBookmarksFeed = () => {
   const limit = 4;
   const {
     data: bookmarked_plants,
-    isSuccess,
     isLoading,
     isFetching,
     isFetched,
   } = useFetchBookmarkFeedPlants(currentPage, limit);
 
-  const [bookmarkList, setBookmarkList] = useState<typeof bookmarked_plants>();
+  // const [bookmarkList, setBookmarkList] = useState<typeof bookmarked_plants>();
 
   console.log(bookmarked_plants);
 
   if (isLoading || isFetching) {
     return (
-      
+
       <RenderPlantsGrid>
         {Array.from({ length: 15 }).map((_, index) => (
-            <DisplayPlantsSkeleton key={index} />
-          ))}
+          <DisplayPlantsSkeleton key={index} />
+        ))}
       </RenderPlantsGrid>
     );
   }
