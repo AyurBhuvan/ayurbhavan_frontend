@@ -1,4 +1,4 @@
-import { PlantCardType, PlantDetailsType } from "../plant_types/plant_feed_card_type"
+import { PlantCardType } from "../plant_types/plant_feed_card_type"
 
 export interface BookmarkType {
   id: string
